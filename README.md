@@ -110,6 +110,11 @@ For Windows users, you may need to specify the Tesseract executable path in app.
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 ```
 
+## Contribute
+If you want to contribute to this project, follow these steps:
+
+Fork the repository. Create a new branch for your feature or bugfix. Make your changes and commit them. Push your changes to your fork. Open a pull request.
+
 ## License
 This project is open source and available under the MIT License.
 
