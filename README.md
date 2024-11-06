@@ -1,5 +1,7 @@
-# Image to Text Converter
+# 🚀Image to Text Converter
 This is a self hostable Flask application that allows users to upload an image and extract text from it using Optical Character Recognition (OCR) via pytesseract. The extracted text is then displayed in a textarea on the page.
+
+![screenshot](screenshot.png)
 
 ## Features
 - Upload an image file (e.g., PNG, JPEG).
