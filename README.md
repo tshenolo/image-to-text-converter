@@ -65,34 +65,6 @@ deactivate
 ## Dockerizing the Application
 You can use Docker to containerize the application, making it easy to deploy and run consistently across different environments.
 
-### Dockerfile
-Create a Dockerfile in the root of the project with the following contents:
-```dockerfile
-# Use the official Python image as the base image
-FROM python:3.10-slim
-
-# Install Tesseract OCR
-RUN apt-get update && \
-    apt-get install -y tesseract-ocr && \
-    rm -rf /var/lib/apt/lists/*
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the requirements and install dependencies
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# Copy the application code
-COPY . .
-
-# Expose the port the app runs on
-EXPOSE 5000
-
-# Run the application
-CMD ["python", "app.py"]
-```
-
 ### Building and Running the Docker Container
 
 1. Build the Docker image:
@@ -102,7 +74,7 @@ docker build -t image-to-text-converter .
 
 2. Run the Docker container:
 ```bash
-docker run -d -p 5000:5000 image-to-text-converter
+docker run -d -p 5000:5000 --name image-to-text-converter image-to-text-converter
 ```
 
 3. Open a web browser and go to http://localhost:5000 to access the app.
